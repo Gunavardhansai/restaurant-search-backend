@@ -189,7 +189,7 @@ Search top restaurants for a dish within a mandatory price range.
 
 **Response shape:**
 
-`{
+```{
   "restaurants": [
     {
       "restaurantId": 1,
@@ -201,7 +201,7 @@ Search top restaurants for a dish within a mandatory price range.
     }
   ]
 }
-`
+```
 
 **Validation rules**
 
@@ -222,7 +222,7 @@ Search top restaurants for a dish within a mandatory price range.
 
 **Sample response:**
 
-`{
+```{
   "restaurants": [
     {
       "restaurantId": 1,
@@ -242,7 +242,7 @@ Search top restaurants for a dish within a mandatory price range.
     }
   ]
 }
-`
+```
 
 * * *
 
@@ -329,13 +329,13 @@ Be prepared to:
 
 ## Git & deploy checklist
 
-`git init
+```git init
 git add .
 git commit -m "Initial: restaurant search backend"
 git branch -M main
 git remote add origin https://github.com/<your-username>/restaurant-search-backend.git
 git push -u origin main
-`
+```
 
 Then connect the GitHub repo to Railway / Render and deploy.
 
@@ -344,6 +344,7 @@ Then connect the GitHub repo to Railway / Render and deploy.
 ## License
 
 MIT License — feel free to reuse and adapt the code.
+
 
 
 
