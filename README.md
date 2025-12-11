@@ -1,4 +1,3 @@
-﻿# restaurant-search-backend
 # Restaurant Search Backend
 
 Simple Node.js + Express backend with MySQL that lets users **search restaurants by dish name** within a **mandatory price range**, returning the **top 10 restaurants** where that dish was ordered the most.
@@ -69,26 +68,26 @@ This repository is built to match a take-home assignment requirement and is inte
     
 
 * * *
+### 📂 Project Structure
 
-## Project structure
-
-
-├── src
-│ ├── app.js # Express app
-│ ├── routes
-│ │ └── searchRoutes.js
-│ ├── controllers
-│ │ └── searchController.js
-│ ├── services
-│ │ └── searchService.js
-│ └── db
-│ └── index.js # mysql2 pool/connection
+```text
+└── src
+    ├── app.js                 # Express app
+    ├── routes
+    │   └── searchRoutes.js
+    ├── controllers
+    │   └── searchController.js
+    ├── services
+    │   └── searchService.js
+    ├── db
+    │   └── index.js           # mysql2 pool/connection
 ├── seed
-│ ├── schema.sql # create DB, tables, indexes
-│ └── seed.sql # sample data (20 restaurants)
+│   ├── schema.sql             # create DB, tables, indexes
+│   └── seed.sql               # sample data (20 restaurants)
 ├── .env.example
 ├── package.json
 └── README.md
+
 
 * * *
 
@@ -346,6 +345,7 @@ Then connect the GitHub repo to Railway / Render and deploy.
 ## License
 
 MIT License — feel free to reuse and adapt the code.
+
 
 
 
