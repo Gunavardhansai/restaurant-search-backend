@@ -129,7 +129,7 @@ Server should log:
 *   `DB_PORT` — MySQL port (default: `3306`)
     
 *   `DB_USER` — MySQL username
-    
+
 *   `DB_PASSWORD` — MySQL password (empty value allowed)
     
 *   `DB_NAME` — Database name (`restaurant_finder_db` by default)
