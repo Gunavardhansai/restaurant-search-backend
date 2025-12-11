@@ -86,7 +86,7 @@ This repository is built to match a take-home assignment requirement and is inte
 │   └── seed.sql               # sample data (20 restaurants)
 ├── .env.example
 ├── package.json
-└── README.md
+└── README.md```
 
 
 * * *
@@ -345,6 +345,7 @@ Then connect the GitHub repo to Railway / Render and deploy.
 ## License
 
 MIT License — feel free to reuse and adapt the code.
+
 
 
 
