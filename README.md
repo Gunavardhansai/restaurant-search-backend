@@ -71,9 +71,24 @@ This repository is built to match a take-home assignment requirement and is inte
 * * *
 
 ## Project structure
-
-`. ├── src │   ├── app.js                 # Express app │   ├── routes │   │   └── searchRoutes.js │   ├── controllers │   │   └── searchController.js │   ├── services │   │   └── searchService.js │   └── db │       └── index.js           # mysql2 pool/connection ├── seed │   ├── schema.sql             # create DB, tables, indexes │   └── seed.sql               # sample data (20 restaurants) ├── .env.example ├── package.json └── README.md`
-
+`
+├── src
+│   ├── app.js                 # Express app
+│   ├── routes
+│   │   └── searchRoutes.js
+│   ├── controllers
+│   │   └── searchController.js
+│   ├── services
+│   │   └── searchService.js
+│   └── db
+│       └── index.js           # mysql2 pool/connection
+├── seed
+│   ├── schema.sql             # create DB, tables, indexes
+│   └── seed.sql               # sample data (20 restaurants)
+├── .env.example
+├── package.json
+└── README.md
+`
 * * *
 
 ## Quick start (Windows / macOS / Linux)
@@ -106,7 +121,9 @@ PowerShell does not support `<` redirection directly; use CMD wrapper:
 
 Copy `.env.example` to `.env` and update credentials:
 
-`cp .env.example .env         # macOS / Linux copy .env.example .env       # PowerShell`
+`cp .env.example .env         
+    # macOS / Linux copy .env.example .env       
+    # PowerShell`
 
 Edit `.env`:
 
@@ -173,7 +190,19 @@ Search top restaurants for a dish within a mandatory price range.
 
 **Response shape:**
 
-`{   "restaurants": [     {       "restaurantId": 1,       "restaurantName": "Hyderabadi Spice House",       "city": "Hyderabad",       "dishName": "Chicken Biryani",       "dishPrice": "220.00",       "orderCount": 6     }   ] }`
+`{
+  "restaurants": [
+    {
+      "restaurantId": 1,
+      "restaurantName": "Hyderabadi Spice House",
+      "city": "Hyderabad",
+      "dishName": "Chicken Biryani",
+      "dishPrice": "220.00",
+      "orderCount": 6
+    }
+  ]
+}
+`
 
 **Validation rules**
 
@@ -194,7 +223,27 @@ Search top restaurants for a dish within a mandatory price range.
 
 **Sample response:**
 
-`{   "restaurants": [     {       "restaurantId": 1,       "restaurantName": "Hyderabadi Spice House",       "city": "Hyderabad",       "dishName": "Chicken Biryani",       "dishPrice": "220.00",       "orderCount": 10     },     {       "restaurantId": 2,       "restaurantName": "Royal Dum Biryani",       "city": "Bangalore",       "dishName": "Chicken Biryani",       "dishPrice": "230.00",       "orderCount": 9     }   ] }`
+`{
+  "restaurants": [
+    {
+      "restaurantId": 1,
+      "restaurantName": "Hyderabadi Spice House",
+      "city": "Hyderabad",
+      "dishName": "Chicken Biryani",
+      "dishPrice": "220.00",
+      "orderCount": 10
+    },
+    {
+      "restaurantId": 2,
+      "restaurantName": "Royal Dum Biryani",
+      "city": "Bangalore",
+      "dishName": "Chicken Biryani",
+      "dishPrice": "230.00",
+      "orderCount": 9
+    }
+  ]
+}
+`
 
 * * *
 
@@ -240,7 +289,7 @@ Automated tests (optional):
     
 6.  Confirm the deployed route:
     
-    `https://<your-app>.railway.app/search/dishes?name=biryani&minPrice=200&maxPrice=260`
+    `https://restaurant-search-backend-production.up.railway.app/search/dishes?name=biryani&minPrice=100&maxPrice=400`
     
 
 **Notes**
@@ -252,20 +301,6 @@ Automated tests (optional):
 
 * * *
 
-## Troubleshooting
-
-*   `ER_ACCESS_DENIED_ERROR` — incorrect DB user/password. Fix `.env`.
-    
-*   `ECONNREFUSED` — MySQL server not running or host wrong.
-    
-*   `mysql not recognized` (Windows) — add MySQL `bin` folder to PATH and restart terminal.
-    
-*   Duplicate rows after reseeding — truncate tables before inserting (seed file already handles this if included).
-    
-*   If `orderCount` shows `0` rows: ensure seed created orders, or change `LEFT JOIN orders` to `JOIN orders` in `src/services/searchService.js` to exclude zero-order menu items.
-    
-
-* * *
 
 ## Extensions & interview talking points
 
@@ -295,7 +330,13 @@ Be prepared to:
 
 ## Git & deploy checklist
 
-`git init git add . git commit -m "Initial: restaurant search backend" git branch -M main git remote add origin https://github.com/<your-username>/restaurant-search-backend.git git push -u origin main`
+`git init
+git add .
+git commit -m "Initial: restaurant search backend"
+git branch -M main
+git remote add origin https://github.com/<your-username>/restaurant-search-backend.git
+git push -u origin main
+`
 
 Then connect the GitHub repo to Railway / Render and deploy.
 
@@ -304,3 +345,4 @@ Then connect the GitHub repo to Railway / Render and deploy.
 ## License
 
 MIT License — feel free to reuse and adapt the code.
+
