@@ -87,9 +87,7 @@ This repository is built to match a take-home assignment requirement and is inte
 ├── .env.example
 ├── package.json
 └── README.md
-
-
-
+```
 * * *
 
 ## Quick start (Windows / macOS / Linux)
@@ -346,6 +344,7 @@ Then connect the GitHub repo to Railway / Render and deploy.
 ## License
 
 MIT License — feel free to reuse and adapt the code.
+
 
 
 
