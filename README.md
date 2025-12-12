@@ -106,13 +106,15 @@ Make sure MySQL server is installed and running. Create the database and import 
 
 #### macOS / Linux / Git Bash
 
-`mysql -u root -p < seed/schema.sql mysql -u root -p < seed/seed.sql`
+`mysql -u root -p < seed/schema.sql 
+mysql -u root -p < seed/seed.sql`
 
 #### Windows PowerShell
 
 PowerShell does not support `<` redirection directly; use CMD wrapper:
 
-`cmd /c "mysql -u root -p restaurant_finder_db < seed\schema.sql" cmd /c "mysql -u root -p restaurant_finder_db < seed\seed.sql"`
+`cmd /c "mysql -u root -p restaurant_finder_db < seed\schema.sql" 
+cmd /c "mysql -u root -p restaurant_finder_db < seed\seed.sql"`
 
 > If `mysql` is not recognized, add the MySQL `bin` folder to your PATH, then restart terminal.
 
@@ -126,7 +128,13 @@ Copy `.env.example` to `.env` and update credentials:
 
 Edit `.env`:
 
-`DB_HOST=localhost DB_PORT=3306 DB_USER=root DB_PASSWORD=your_mysql_password_or_empty DB_NAME=restaurant_finder_db PORT=3000`
+```DB_HOST=localhost 
+DB_PORT=3306 
+DB_USER=root 
+DB_PASSWORD=your_mysql_password_or_empty 
+DB_NAME=restaurant_finder_db 
+PORT=3000
+```
 
 ### 5\. Run the server
 
@@ -344,6 +352,7 @@ Then connect the GitHub repo to Railway / Render and deploy.
 ## License
 
 MIT License — feel free to reuse and adapt the code.
+
 
 
 
