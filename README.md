@@ -299,7 +299,7 @@ Automated tests (optional):
     
 6.  Confirm the deployed route:
     
-    `https://restaurant-search-backend-production.up.railway.app/search/dishes?name=biryani&minPrice=100&maxPrice=400`
+    ```https://restaurant-search-backend-production.up.railway.app/search/dishes?name=biryani&minPrice=100&maxPrice=400```
     
 
 **Notes**
@@ -355,6 +355,7 @@ Then connect the GitHub repo to Railway / Render and deploy.
 ## License
 
 MIT License — feel free to reuse and adapt the code.
+
 
 
 
